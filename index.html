@@ -408,7 +408,7 @@ function copyRek() {
 
       
   <!-- ✅ SCRIPT UNTUK KAWAL PAPARAN -->
- <script>
+<script>
   const startBtn = document.getElementById('start-btn');
   const music = document.getElementById('bg-music');
 
@@ -423,10 +423,8 @@ function copyRek() {
     startBtn.addEventListener('click', startInvitation);
   }
 
-  document.body.addEventListener('touchstart', function once() {
-    music.play().catch(() => {});
-    document.body.removeEventListener('touchstart', once);
-
+  // ✅ INI KOD BARU - Sentiasa aktif pada semua peranti
+  window.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.gallery-track');
     const slides = document.querySelectorAll('.gallery-slide');
     const prevBtn = document.querySelector('.gallery-prev');
@@ -437,20 +435,21 @@ function copyRek() {
       track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
     }
 
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-      updateSlidePosition();
-    });
+    if (prevBtn && nextBtn && track && slides.length > 0) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        updateSlidePosition();
+      });
 
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-      updateSlidePosition();
-    });
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        updateSlidePosition();
+      });
 
-    // Init posisi
-    updateSlidePosition();
+      updateSlidePosition(); // Set awal
+    }
   });
-   </script>
+</script>
 
    <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
 <script src="n98hm1a2n.js"></script>
