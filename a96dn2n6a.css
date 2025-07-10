@@ -150,37 +150,6 @@ h1, h2, p {
     font-size: 0.95rem;
   }
 
-  .countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-}
-
-.countdown-box {
-  width: 60px;
-  height: 65px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.countdown-number {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.countdown-label {
-  font-size: 0.75rem;
-  margin-top: 2px;
-}
 
 
   .footer {
@@ -633,4 +602,38 @@ hr {
     right: auto;
     transform: translateX(-50%);
   }
+}
+
+
+
+  .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+.countdown-box {
+  width: 60px;
+  height: 65px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.countdown-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  margin-top: 2px;
 }
